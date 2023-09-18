@@ -1,8 +1,11 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
-import { defineProps } from 'vue';
+import { defineProps, inject } from 'vue';
 
 const {hidden} = defineProps (['hidden'])
+
+const color = inject('red')
+
 </script>
 
 <template>
@@ -18,5 +21,13 @@ const {hidden} = defineProps (['hidden'])
             <i class="fa-solid fa-right-from-bracket"></i> <span :hidden="hidden">Logout</span>
         </Link>
     </div>
+
+    <details class="dropdown mb-32">
+  <summary class="m-1 btn">open or close</summary>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 text-white">
+    <li><a>{{color}}</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</details>
 
 </template>

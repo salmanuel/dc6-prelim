@@ -14,7 +14,6 @@
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4 px-2">
               <ClientsCard v-for="client in clients.data" :client="client" :key="client.id"/>
             </div>
-
                 <!-- <div class="grid grid-cols-1 md:grid-cols-5 gap-4 px-2">
                     <div v-for="client in clients.data" :key="client.id" class="bg-gray-200 rounded shadow p-4">
                         <div class="flex justify-center">
@@ -26,8 +25,6 @@
                         </div>
                     </div>
                 </div> -->
-
-
           </div>
       </div>
 

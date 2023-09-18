@@ -1,10 +1,14 @@
 <script setup>
     import MainNav from '@/Components/MainNav.vue'
-    import { ref } from 'vue';
+    import ColorSelect from '@/Components/ColorSelect.vue';
+    import { provide, ref } from 'vue';
     import { Link } from '@inertiajs/vue3';
 
     let width = ref('w-[250px]')
     let hide = ref(false)
+
+    const color = ref('red')
+    provide('red', color)
 
     function toggleWidth() {
         if(width.value == 'w-[250px]') {
@@ -53,6 +57,8 @@
         </div> -->
 
         <MainNav :hidden="hide"></MainNav>
+
+        <!-- <ColorSelect></ColorSelect> -->
     </div>
     <div id="container" class="flex-1">
         <slot />
